@@ -1,6 +1,78 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Operator Mono;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Operator Mono;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.container > div {
+  margin-bottom: 0.8em;
+}
+.container .heading {
+  color: royalblue;
+  font-size: 2em;
+  margin-bottom: 0.3em;
+}
+
+/* Personal Info Section CSS Start */
+.container .personal_info_table {
+  width: 100%;
+  text-align: left;
+}
+.container .personal_info_table th {
+  width: 20%;
+}
+.container .personal_info_table td {
+  width: 80%;
+}
+.container .personal_info_table td::before {
+  content: " : ";
+}
+/* Personal Info Section CSS End */
+
+/* Educational Experience Section CSS Start */
+.educational_experience .educational_experience_table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+.educational_experience .educational_experience_table th {
+  border: 1px solid royalblue;
+  padding: 0.5em;
+  color: royalblue;
+}
+.educational_experience .educational_experience_table td {
+  border: 1px solid royalblue;
+  padding: 0.5em;
+}
+/* Educational Experience Section CSS End */
+
+@media only screen and (max-width: 425px) {
+  .container {
+    width: 100%;
+    padding: 0.5em;
+  }
+  .container .heading {
+    font-size: 1.5em;
+  }
+  .container .personal_info_table th {
+    width: 40%;
+    font-size: 0.8em;
+  }
+  .container .personal_info_table td {
+    width: 60%;
+    font-size: 0.8em;
+  }
+  .container .educational_experience .educational_experience_table th{
+    font-size: 0.8em;
+  }
+  .container .educational_experience .educational_experience_table td{
+    font-size: 0.8em;
+  }
+  .container .educational_experience .responsive {
+    overflow-x: scroll;
+  }
 }
