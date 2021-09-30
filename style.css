@@ -1,6 +1,115 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Operator Mono;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Operator Mono;
 }
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Heading CSS Start */
+.heading {
+  background: #ddd;
+  padding: 1em;
+  border-radius: 20px;
+  margin-bottom: 1em;
+}
+.title {
+  background: linear-gradient(to right, red, blue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 2px #222);
+}
+/* Heading CSS End */
+/* Checkbox CSS Start */
+.checkbox {
+  -webkit-appearance: none;
+  height: 100px;
+  width: 300px;
+  background: #ddd;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 1s;
+  margin-bottom: 2em;
+}
+.checkbox::before {
+  content: "";
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: #e21212;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10px #222;
+  transition: 1s;
+}
+.checkbox:checked {
+  background: red;
+}
+.checkbox:checked::before {
+  left: 200px;
+}
+/* Checkbox CSS End */
+
+/* Range CSS Start */
+.range {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 300px;
+  background: #ddd;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: 5px solid #e21212;
+  box-shadow: -1010px 0 0 1000px rgb(99, 5, 5);
+}
+/* Range CSS End */
+
+/* Text CSS Start */
+.text {
+  height: 40px;
+  width: 300px;
+  padding: 1em;
+  border: 2px solid #e21212;
+  border-radius: 50px;
+  color: #e21212;
+  font-weight: 600;
+  outline: none;
+  margin-bottom: 2em;
+}
+::placeholder {
+  color: #e21212;
+}
+/* Text CSS End */
+
+/* Submit CSS Start */
+.submit {
+  padding: 1em 3em;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  background: linear-gradient(45deg, red, blue, purple, hotpink);
+  background-size: 400%;
+  background-position: left;
+  cursor: pointer;
+  transition: background-position 1s;
+}
+.submit:hover {
+  background-position: right;
+}
+/* Submit CSS End */
